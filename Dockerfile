@@ -1,5 +1,4 @@
 FROM alpine:3.7
-ENV PYTHONUNBUFFERED 1
 ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
 MAINTAINER lukasgarcya@hotmail.com
 RUN mkdir -p /opt/djangoSIGE/
@@ -12,6 +11,7 @@ RUN apk add --no-cache python3 python3-dev \
     libxml2-dev libxslt-dev \
     musl-dev postgresql-dev \
     && curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh\
+    && pip install -U pip\
     && pip3 install -U setuptools\
     && pip3 install -r requirements.txt \
     && pip3 install gunicorn psycopg2-binary
