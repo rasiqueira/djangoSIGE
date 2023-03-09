@@ -1,4 +1,6 @@
 FROM alpine:3.7
+ENV PYTHONUNBUFFERED 1
+ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
 MAINTAINER lukasgarcya@hotmail.com
 RUN mkdir -p /opt/djangoSIGE/
 WORKDIR /opt/djangoSIGE/
