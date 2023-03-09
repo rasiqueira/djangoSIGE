@@ -9,4 +9,4 @@ RUN apk add --no-cache python3 python3-dev \
     libxml2-dev libxslt-dev \
     musl-dev postgresql-dev \
     && pip3 install -r requirements.txt \
-    && pip3 install gunicorn psycopg2
+    && pip3 install gunicorn psycopg2-binary
