@@ -10,7 +10,7 @@ services:
       - ./database:/var/lib/postgresql/data
   gunicorn:
     image: djangosige
-    command: gunicorn -b 0.0.0.0:8000 djangosige.wsgi:application
+    command: gunicorn -b 0.0.0.0:80 djangosige.wsgi:application
     environment:
       - SECRET_KEY=0#pny4oox9s#+#5dkde25dj79b-o^sdbz4kiumg#e1qx3ky
       - ALLOWED_HOSTS='gunicorn'
